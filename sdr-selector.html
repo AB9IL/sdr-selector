@@ -25,10 +25,10 @@
         button2:hover {background-color:#3758A2;color:#FFFFFF;}
         button3 {float:left;padding-left:4px;padding-right:4px;
         border:4px;border-radius:4px;margin:4px;cursor:pointer;text-align:left;
-        font-weight:600;font-size:17px;color:#20CCCC;}
+        font-weight:600;font-size:17px;color:#1FC6ED;}
         button4 {display:inline-block;width:25%;text-align:center;border:1px solid #304358;
-            border-radius:4px;cursor:pointer;font-size:15px;font-weight:400;color:#20CCCC;
-        background-color:#0B1A2A;margin:auto;padding:auto;}
+        border-radius:4px;cursor:pointer;font-size:15px;font-weight:400;color:#1FC6ED;
+        background-color:#0B1A2A;margin:auto;}
         button4:hover {color:#CCCCCC;background-color:#094582;border:1px solid #245E9A;}
         button4:active {color:#CCCCCC;background-color:#094582;border:1px solid #FFFFFF;}
         button5 {float:left;padding:3px;border:1px solid #CCCCCC;border-radius:1px;
@@ -39,31 +39,31 @@
         div.clear {height:0;line-height:0px;width:100vw;font-size:0;clear:both;}
         div.column {float:left;width:430px;padding-left:13px;}
         div.column4 {float:left;width:160px;height:250px;padding-left:8px;}
-        div.header {width:900px;height:90px;margin:0 auto;font-size:40px;color:#BE2F5B;}
-        div.region {line-height:1.5;}
+        div.header {background-color:#030309;width:900px;max-width:95vw;;opacity:1.0;}
+        div.region {line-height:1.5;text-align:center;margin:5px auto 50px auto;}
         div.tabs {display:flex;justify-content:center;}
-        font.adtext1, font.adtext2 {color:#FFAD19;font-size:35;font-family:TimesNewRoman;}
-        h1 {text-align:center;margin:auto;padding:15px;font-size:30px;font-weight:600;
-            color:#00CCCC;max-width:82vw;}
-        h2 {margin-top:15px;padding-top:20px;text-align:left;font-size:18px;
-            font-weight:600;color:#147BFF;max-width:82vw;}
+        h1 {text-align:center;margin:5px auto 5px auto;padding:15px;font-size:30px;font-weight:600;
+            color:#00CCCC;max-width:85vw;}
+        h2 {margin:30px auto 5px auto;padding:10px;text-align:center;font-size:18px;
+            font-weight:600;color:#147BFF;max-width:85vw;}
         h3 {margin-top:15px;padding-top:20px;text-align:left;font-size:15px;
-            font-weight:600;color:#147BFF;max-width:82vw;}
-        h4 {font-size:15px;font-weight:600;color:#00CCCC;max-width:82vw;}
+            font-weight:600;color:#147BFF;max-width:85vw;}
+        h4 {font-size:15px;font-weight:600;color:#00CCCC;max-width:85vw;}
         img {width:auto;max-width:100%;height:auto;}
-        li {margin-left:40px;padding-top:2px;padding-bottom:2px;max-width:85vw;}
+        li {margin-left:40px;padding-top:2px;padding-bottom:2px;max-width:95vw;}
         ol {margin-left:15;margin-bottom:10px;padding-left:10px;padding-right:10px;
-            max-width:85vw;}
+            max-width:95vw;}
         ul {list-style-type:square;margin-left:15;margin-bottom:10px;padding-left:10px;
-            padding-right:10px;max-width:85vw;}
+            padding-right:10px;max-width:95vw;}
         pre {text-align:left;font-weight:400;font-size:15px;color:#CCCCCC;margin-bottom:15px;}
-        pre.contents {font-family:monospace;font-weight:300;font-size:15px;line-height:1.5;
-        padding-top:10px;padding-bottom:5px;}
-        p {text-align:justify;padding-top:5px;padding-bottom:5px;width:900px;max-width:85vw;}
+        pre.contents {font-family:monospace;font-weight:300;font-size:17px;line-height:1.5;
+        padding-top:5px;padding-bottom:5px;text-align:center;}
+        p {text-align:justify;padding-top:5px;padding-bottom:5px;width:900px;max-width:95vw;}
     </style>
 </head>
 <body>
-    <h1>Tune AM Radio on Internet SDRs</h1>
+<div class="header">
+<h1>Tune AM Radio on Internet SDRs</h1>
 <!-- set up the tabs -->
 <div class="tabs">
   <button class="tablinks" onclick="openRegion(event, 'global')" id="defaultOpen">Global Stations</button>
@@ -71,36 +71,26 @@
   <button class="tablinks" onclick="openRegion(event, 'Canada')">Canada</button>
   <button class="tablinks" onclick="openRegion(event, 'AusNz')">Australia & New Zealand</button>
   <button class="tablinks" onclick="openRegion(event, 'India')">India</button>
+  <button class="tablinks" onclick="openRegion(event, 'About')">About</button>
 </div>
-
-<p>
-Use the list below to quickly open a browser tab, streaming your favorite station
-from an internet connected software defined radio receiver (SDR). If signals are
-weak or noisy, try another station or switch to a different receiver location. You
-can tune around and find more stations on any of the SDRs. They not only receive AM /
-mediumwave, but also work fabulously on shortwave. <strong>No direct studio streams, so
-no geoblocking by the broadcasters!</strong>
-</p>
-
-How to use: 1) Click on a city or region. 2) Click the button for a station. 3) Click on a receiver location to listen.<br>
-</header>
+</div>
 
 <!-- content for first tab -->
 <div id="global" class="tabcontent">
-
 <pre class="contents">
 <p style="font-family:monospace;font-size:18px;font-weight:700;text-align:center;">Receiver Locations (Click for Stations)</p>
 <a href="#WEEU">Western Europe</a>
 <a href="#EAEU">Eastern Europe</a>
-<a href="#BANG">Bangkok, Thailand</a>
+<a href="#BANG">Thailand</a>
+<a href="#JAPN">Japan</a>
+<a href="#INDO">Indonesia</a>
 <a href="#SCA">Argentina and Uruguay</a>
 <a href="#SPB">Sao Paulo, Brasil</a>
 </pre>
 
 
-<br>
 <div class="region">
-  <h2 id="WEEU">Western Europe</h2><br>
+  <h2 id="WEEU">Western Europe</h2>
   <button4 onclick="tuneSDR('153')">Radio Antena Satelor 153</button4>
   <button4 onclick="tuneSDR('198')">BBC Radio 4 198</button4>
   <button4 onclick="tuneSDR('225')">Polskie Radio Jedynka 225</button4>
@@ -125,10 +115,10 @@ How to use: 1) Click on a city or region. 2) Click the button for a station. 3) 
   <button4 onclick="tuneSDR('1584')">Panjab Radio 1584</button4>
   <br>
   <br>
-  <a href="http://websdr.heppen.be/?tune=1000am?zoom=4" target="_blank">WebSDR in Heppen, Belgium</a><br>
+  <a href="http://websdr.heppen.be/?tune=1000am" target="_blank">WebSDR in Heppen, Belgium</a><br>
   <a href="http://merchtem.on3ure.be:8073/?f=1000/-5000,5000samz10" target="_blank">KiwiSDR, Terspelt, Belgium</a><br>
-  <a href="http://websdr.ewi.utwente.nl:8901/?tune=1000am?zoom=4" target="_blank">WebSDR in Enschede, Netherlands</a><br>
-  <a href="http://remoteradio.changeip.org:8073/?tune=1000am?zoom=4" target="_blank">WebSDR in Bedford, United Kingdom</a><br>
+  <a href="http://websdr.ewi.utwente.nl:8901/?tune=1000am" target="_blank">WebSDR in Enschede, Netherlands</a><br>
+  <a href="http://remoteradio.changeip.org:8073/?tune=1000am" target="_blank">WebSDR in Bedford, United Kingdom</a><br>
   <a href="http://kiwisdr2.hoka.co.uk:8073/?f=1000/-5000,5000samz10" target="_blank">KiwiSDR, Canterbury, United Kingdom</a><br>
   <a href="http://g8ure.ddns.net:8074/?f=1000/-5000,5000samz10" target="_blank">KiwiSDR, Chichester, United Kingdom</a><br>
   <a href="http://websdr.uk:8073/?f=1000/-5000,5000samz10" target="_blank">KiwiSDR, Weston-super-Mare, United Kingdom</a><br>
@@ -138,9 +128,8 @@ How to use: 1) Click on a city or region. 2) Click the button for a station. 3) 
 </div>
 
 
-<br>
 <div class="region">
-  <h2 id="EAEU">Eastern Europe</h2><br>
+  <h2 id="EAEU">Eastern Europe</h2>
   <button4 onclick="tuneSDR('153')">Radio Antena Satelor 153</button4>
   <button4 onclick="tuneSDR('225')">Polskie Radio Jedynka 225</button4>
   <button4 onclick="tuneSDR('540')">Kossuth Radio 540</button4>
@@ -171,21 +160,20 @@ How to use: 1) Click on a city or region. 2) Click the button for a station. 3) 
   <button4 onclick="tuneSDR('1584')">Radio Studio X 1584</button4>
   <br>
   <br>
-  <a href="http://9a1cra.ddns.net:8902/?tune=1000am?zoom=4" target="_blank">WebSDR in Krizevci, Croatia</a><br>
-  <a href="http://makrisv2amk.ddns.me:58901/?tune=1000am?zoom=4" target="_blank">WebSDR in Alexandroupolis, Greece</a><br>
-  <a href="https://sv1btlham.no-ip.org:8902/?tune=1000am?zoom=4" target="_blank">WebSDR in Athens, Greece</a><br>
-  <a href="http://sv1rvl.ddns.net:8901/?tune=1000am?zoom=4" target="_blank">WebSDR in Athens, Greece</a><br>
+  <a href="http://9a1cra.ddns.net:8902/?tune=1000am" target="_blank">WebSDR in Krizevci, Croatia</a><br>
+  <a href="http://makrisv2amk.ddns.me:58901/?tune=1000am" target="_blank">WebSDR in Alexandroupolis, Greece</a><br>
+  <a href="https://sv1btlham.no-ip.org:8902/?tune=1000am" target="_blank">WebSDR in Athens, Greece</a><br>
+  <a href="http://sv1rvl.ddns.net:8901/?tune=1000am" target="_blank">WebSDR in Athens, Greece</a><br>
   <a href="http://kiwirze.ddns.net:8073/?f=1000/-5000,5000samz10" target="_blank">KiwiSDR, Rzeszow, Poland</a><br>
-  <a href="http://websdr.yo3ggx.ro:8765/?tune=1000am?zoom=4" target="_blank">WebSDR in Breaza, Romania</a><br>
+  <a href="http://websdr.yo3ggx.ro:8765/?tune=1000am" target="_blank">WebSDR in Breaza, Romania</a><br>
   <a href="http://kiwisdr-dorohoi.ddns.net:8073/?f=1000/-5000,5000samz10" target="_blank">KiwiSDR, Dorohoi, Romania</a><br>
   <a href="http://sdr.yo3ksr.ro:8073/?f=1000/-5000,5000samz10" target="_blank">KiwiSDR, Bucharest, Romania</a><br>
 
 </div>
 
 
-<br>
 <div class="region">
-  <h2 id="BANG">Bangkok, Thailand</h2><br>
+  <h2 id="BANG">Thailand</h2>
   <button4 onclick="tuneSDR('540')">Cavalry Center Radio 540</button4>
   <button4 onclick="tuneSDR('594')">AAA Brigade 594</button4>
   <button4 onclick="tuneSDR('630')">11th Army Radio 630</button4>
@@ -204,14 +192,64 @@ How to use: 1) Click on a city or region. 2) Click the button for a station. 3) 
   <button4 onclick="tuneSDR('1440')">Army Signal Corps 1440</button4>
   <br>
   <br>
-  <a href="http://la6lukiwisdrth.ddns.net:8073/?f=1000/-5000,5000samz10" target="_blank">KiwiSDR, Bangkok, Thailand</a><br>
+  <a href="http://la6lukiwisdrth.ddns.net:8073/?f=1000/-5000,5000samz10" target="_blank">KiwiSDR, Cha Am, Thailand</a><br>
+  <a href="http://146.70.61.131:8322/?f=1000/-5000,5000samz10" target="_blank">KiwiSDR, Bangkok, Thailand</a><br>
 
 </div>
 
 
-<br>
 <div class="region">
-  <h2 id="SCA">Argentina and Uruguay</h2><br>
+  <h2 id="JAPN">Japan</h2>
+  <button4 onclick="tuneSDR('594')">JOAK NHKラジオ第1 東京 594</button4>
+  <button4 onclick="tuneSDR('666')">JOBK NHKラジオ第1 大阪666</button4>
+  <button4 onclick="tuneSDR('693')">JOAB NHKラジオ第2 東京 693</button4>
+  <button4 onclick="tuneSDR('729')">JOCK NHKラジオ第1 愛知 729</button4>
+  <button4 onclick="tuneSDR('774')">JOUB NHKラジオ第2 秋田 774</button4>
+  <button4 onclick="tuneSDR('810')">AFN Eagle / NPR News 810</button4>
+  <button4 onclick="tuneSDR('828')">JOBB NHKラジオ第2 大阪 828</button4>
+  <button4 onclick="tuneSDR('954')">JOKR TBSラジオ 954</button4>
+  <button4 onclick="tuneSDR('1134')">JOQR 文化放送 1134</button4>
+  <button4 onclick="tuneSDR('1242')">JOLF ニッポン放送 1242</button4>
+  <button4 onclick="tuneSDR('1422')">JORF ラジオ日本 JORF</button4>
+  <br>
+  <br>
+  <a href="http://jp1odj.proxy.kiwisdr.com:8073/?f=1000/-5000,5000samz10" target="_blank">KiwiSDR, Saitama, Japan</a><br>
+  <a href="http://aa842.jp:8073/?f=1000/-5000,5000samz10" target="_blank">KiwiSDR, Kawasaki, Japan</a><br>
+  <a href="http://kiwisdr.hirokinet.com:8073/?f=1000/-5000,5000samz10" target="_blank">KiwiSDR, Tokyo, Japan</a><br>
+  <a href="http://jk1lot.ham-radio-op.net:8073/?f=1000/-5000,5000samz10" target="_blank">KiwiSDR, Tokyo, Japan</a><br>
+  <a href="http://153.240.162.7:1824/?f=1000/-5000,5000samz10" target="_blank">KiwiSDR, Tokyo, Japan</a><br>
+
+</div>
+
+
+<div class="region">
+  <h2 id="INDO">Indonesia</h2>
+  <button4 onclick="tuneSDR('540')">RRI Bandung Pro-4 540</button4>
+  <button4 onclick="tuneSDR('630')">Radio Samhan 630</button4>
+  <button4 onclick="tuneSDR('675')">Radio Syair Tauhid 675</button4>
+  <button4 onclick="tuneSDR('720')">Radio Silaturahim 720</button4>
+  <button4 onclick="tuneSDR('846')">Radio Suara Al-Iman 846</button4>
+  <button4 onclick="tuneSDR('936')">Radio P2SC 936</button4>
+  <button4 onclick="tuneSDR('954')">Radio Benda Baru 954</button4>
+  <button4 onclick="tuneSDR('963')">Radio Prestasi 963</button4>
+  <button4 onclick="tuneSDR('1062')">Radio Sangkakala 1062</button4>
+  <button4 onclick="tuneSDR('1089')">Radio Qu (Bogor) 1089</button4>
+  <button4 onclick="tuneSDR('1134')">Radio Safari - Jawa 1134</button4>
+  <button4 onclick="tuneSDR('1152')">Radio Yasmara 1152</button4>
+  <button4 onclick="tuneSDR('1242')">RRI Pro 1 Bogor 1242</button4>
+  <button4 onclick="tuneSDR('1458')">Radio Fajri Bandung 1458</button4>
+  <button4 onclick="tuneSDR('1476')">Radio Rodja Bandung 1476</button4>
+  <br>
+  <br>
+  <a href="http://swloi33.proxy.kiwisdr.com:8073/?f=1000/-5000,5000samz10" target="_blank">KiwiSDR, Jakarta, Indonesia</a><br>
+  <a href="http://ptlen.proxy.kiwisdr.com:8073/?f=1000/-5000,5000samz10" target="_blank">KiwiSDR, Bandung, Indonesia</a><br>
+  <a href="http://yb3pet.ddns.net:8073/?f=1000/-5000,5000samz10" target="_blank">KiwiSDR, Surabaya, Indonesia</a><br>
+
+</div>
+
+
+<div class="region">
+  <h2 id="SCA">Argentina and Uruguay</h2>
   <button4 onclick="tuneSDR('570')">Radio Argentina 570</button4>
   <button4 onclick="tuneSDR('580')">CX58 Radio Clarin 580</button4>
   <button4 onclick="tuneSDR('590')">LS4 Radio Continental 590</button4>
@@ -241,15 +279,16 @@ How to use: 1) Click on a city or region. 2) Click the button for a station. 3) 
   <button4 onclick="tuneSDR('1350')">LS6 Radio Buenos Aires 1350</button4>
   <br>
   <br>
-  <a href="http://lu5dnpwebsdr.sytes.net:8901/?tune=1000am?zoom=4" target="_blank">WebSDR, Saladillo City Argentina</a><br>
-  <a href="http://201.217.131.106:7900/?tune=1000am?zoom=4" target="_blank">WebSDR, Montevideo, Uruguay</a><br>
+  <a href="http://lu5dnpwebsdr.sytes.net:8901/?tune=1000am" target="_blank">WebSDR, Saladillo City, Argentina</a><br>
+  <a href="http://lu4aa.proxy.kiwisdr.com:8073/?f=1000/-5000,5000samz10" target="_blank">KiwiSDR, Buenos Aires, Argentina</a><br>
+  <a href="http://201.217.131.106:7900/?tune=1000am" target="_blank">WebSDR, Montevideo, Uruguay</a><br>
+  <a href="http://cx8bit.proxy.kiwisdr.com:8073/?f=1000/-5000,5000samz10" target="_blank">KiwiSDR, Montevideo, Uruguay</a><br>
 
 </div>
 
 
-<br>
 <div class="region">
-  <h2 id="SPB">Sao Paulo, Brazil</h2><br>
+  <h2 id="SPB">Sao Paulo, Brazil</h2>
   <button4 onclick="tuneSDR('550')">Radio Banda 550</button4>
   <button4 onclick="tuneSDR('590')">ZYJ234 Difusora AM 590</button4>
   <button4 onclick="tuneSDR('730')">ZYJ208 Marumby AM 730</button4>
@@ -267,7 +306,7 @@ How to use: 1) Click on a city or region. 2) Click the button for a station. 3) 
   <button4 onclick="tuneSDR('1600')">ZYK779 Radio 9 de Julho 1600</button4>
   <br>
   <br>
-  <a href="http://appr.org.br:8905/?tune=1000am?zoom=4" target="_blank">WebSDR Sao Paulo, Brasil</a><br>
+  <a href="http://appr.org.br:8905/?tune=1000am" target="_blank">WebSDR Sao Paulo, Brasil</a><br>
   <a href="http://kiwibsb1.proxy.kiwisdr.com:8073/?f=1000/-5000,5000samz10" target="_blank">KiwiSDR, Brasilia, Brazil</a><br>
 
 </div>
@@ -277,20 +316,20 @@ How to use: 1) Click on a city or region. 2) Click the button for a station. 3) 
 
 <!-- content for second tab -->
 <div id="USA" class="tabcontent">
-
 <pre class="contents">
 <p style="font-family:monospace;font-size:18px;font-weight:700;text-align:center;">Receiver Locations (Click for Stations)</p>
 <a href="#NEUS">Boston - New York - Washigton DC Regions, USA</a>
 <a href="#CHIC">Chicago, Illinois, USA</a>
 <a href="#CFLA">Orlando, Florida, USA</a>
-<a href="#LAUS">Los Angeles, USA</a>
+<a href="#DENV">Denver, Colorado, USA</a>
+<a href="#LAUS">Los Angeles, California, USA</a>
+<a href="#SANF">Northern California, USA</a>
 <a href="#CUUS">Corrine, Utah, USA</a>
 <a href="#TXUS">Gatesville, Texas, USA</a>
 </pre>
 
-<br>
 <div class="region">
-  <h2 id="NEUS">Boston - New York - Washigton DC Regions, USA</h2><br>
+  <h2 id="NEUS">Boston - New York - Washigton DC Regions, USA</h2>
   <button4 onclick="tuneSDR('570')">WMCA The Mission 570</button4>
   <button4 onclick="tuneSDR('630')">WSBN Sports Capitol 630</button4>
   <button4 onclick="tuneSDR('660')">WFAN Sports 660</button4>
@@ -326,16 +365,18 @@ How to use: 1) Click on a city or region. 2) Click the button for a station. 3) 
   <button4 onclick="tuneSDR('1680')">WTTM La Unika 1680</button4>
   <br>
   <br>
-  <a href="http://websdr.k3fef.com:8901/?tune=1000am?zoom=4" target="_blank">WebSDR, Milford, PA, USA</a><br>
-  <a href="http://wa1sthwebsdr.com:8901/?tune=1000am?zoom=4" target="_blank">WebSDR, Kensington, NH, USA</a><br>
-  <a href="http://sdr.k9mq.com:8073/?tune=1000am?zoom=4" target="_blank">WebSDR, Washington, DC, USA</a><br>
-
-
+  <a href="http://websdr.k3fef.com:8901/?tune=1000am" target="_blank">WebSDR, Milford, PA, USA</a><br>
+  <a href="http://73.150.139.247:8073/?f=1000/-5000,5000samz10" target="_blank">KiwiSDR, Princeton Junction, NJ, USA</a><br>
+  <a href="http://matt1234.viewnetcam.com:8073/?f=1000/-5000,5000samz10" target="_blank">KiwiSDR, Highland Falls, NY, USA</a><br>
+  <a href="http://sigmasdr.ddns.net:8074/?f=1000/-5000,5000samz10" target="_blank">KiwiSDR, Holland, MA, USA</a><br>
+  <a href="http://wa1sthwebsdr.com:8901/?tune=1000am" target="_blank">WebSDR, Kensington, NH, USA</a><br>
+  <a href="http://websdr.us:8901/?tune=1000am" target="_blank">WebSDR, Washington, DC, USA</a><br>
+  <a href="http://kiwisdr.surriel.com/?f=1000/-5000,5000samz10" target="_blank">KiwiSDR, Concord, NH, USA</a><br>
 </div>
 
 
 <div class="region">
-  <h2 id="CHIC">Chicago, Illinois, USA</h2><br>
+  <h2 id="CHIC">Chicago, Illinois, USA</h2>
   <button4 onclick="tuneSDR('580')">WILL Illinois Public Media 580</button4>
   <button4 onclick="tuneSDR('670')">WSCR The Score 670</button4>
   <button4 onclick="tuneSDR('720')">WGN Radio 720</button4>
@@ -358,7 +399,7 @@ How to use: 1) Click on a city or region. 2) Click the button for a station. 3) 
 
 
 <div class="region">
-  <h2 id="CFLA">Orlando, Florida, USA</h2><br>
+  <h2 id="CFLA">Orlando, Florida, USA</h2>
   <button4 onclick="tuneSDR('740')">WYGM The Game 740</button4>
   <button4 onclick="tuneSDR('810')">WRSO Acción Radio 810</button4>
   <button4 onclick="tuneSDR('950')">WORL The Answer 950</button4>
@@ -367,14 +408,41 @@ How to use: 1) Click on a city or region. 2) Click the button for a station. 3) 
   <button4 onclick="tuneSDR('1440')">WPRD La Voz 1440</button4>
   <br>
   <br>
-  <a href="http://sdr.n4but.com/?tune=810am?zoom=4" target="_blank">WebSDR, Orlando, Florida, USA</a><br>
+  <a href="http://sdr.n4but.com/?tune=810am" target="_blank">WebSDR, Orlando, Florida, USA</a><br>
 
 </div>
 
 
-<br>
 <div class="region">
-  <h2 id="LAUS">Los Angeles, USA</h2><br>
+  <h2 id="DENV">Denver, Colorado, USA</h2>
+  <button4 onclick="tuneSDR('560')">KLZ The Source 560</button4>
+  <button4 onclick="tuneSDR('630')">KHOW Talk Radio 630</button4>
+  <button4 onclick="tuneSDR('670')">KLTT Christian Talk 670</button4>
+  <button4 onclick="tuneSDR('710')">KNUS NewsTalk 710</button4>
+  <button4 onclick="tuneSDR('760')">KDFD Freedom 760</button4>
+  <button4 onclick="tuneSDR('810')">KLVZ Legends 810</button4>
+  <button4 onclick="tuneSDR('850')">KOA NewsRadio 850</button4>
+  <button4 onclick="tuneSDR('910')">KPOF Point of Faith 910</button4>
+  <button4 onclick="tuneSDR('990')">KRKS The Word 990</button4>
+  <button4 onclick="tuneSDR('1090')">KMXA KUDN Radio 1090</button4>
+  <button4 onclick="tuneSDR('1150')">KNRV Onda 1150</button4>
+  <button4 onclick="tuneSDR('1360')">KHNC The Lion 1360</button4>
+  <button4 onclick="tuneSDR('1390')">KLVZ KGNU Community 1390</button4>
+  <button4 onclick="tuneSDR('1570')">KXJJ La Jota Mexicana 1570</button4>
+  <button4 onclick="tuneSDR('1600')">KEPN ESPN Radio 1600</button4>
+  <button4 onclick="tuneSDR('1690')">KDMD Relevant Radio 1690</button4>
+  <br>
+  <br>
+  <a href="http://jpvm54.ddns.net:8073/?f=1000/-5000,5000samz10" target="_blank">KiwiSDR, Lakewood, Colorado, USA</a><br>
+  <a href="http://n0ls.homedns.org:8073/?f=1000/-5000,5000samz10" target="_blank">KiwiSDR, Broomfield, Colorado, USA</a><br>
+  <a href="http://w0air.ddns.net:8073/?f=1000/-5000,5000samz10" target="_blank">KiwiSDR, Berthoud, Colorado, USA</a><br>
+  <a href="http://n0emp.ddns.net:8073/?f=1000/-5000,5000samz10" target="_blank">KiwiSDR, Fort Collins, Colorado, USA</a><br>
+
+</div>
+
+
+<div class="region">
+  <h2 id="LAUS">Los Angeles, USA</h2>
   <button4 onclick="tuneSDR('570')">LKAC Sports Radio 570</button4>
   <button4 onclick="tuneSDR('640')">KFI Talk Radio 640</button4>
   <button4 onclick="tuneSDR('670')">KIRN 670</button4>
@@ -394,14 +462,42 @@ How to use: 1) Click on a city or region. 2) Click the button for a station. 3) 
   <button4 onclick="tuneSDR('1670')">KHPY Radio Catolica 1670</button4>
   <br>
   <br>
-  <a href="https://kj6eo.com:8901/?tune=1000am?zoom=4" target="_blank">WebSDR, Santa Clarita, California, USA</a><br>
+  <a href="https://kj6eo.com:8901/?tune=1000am" target="_blank">WebSDR, Santa Clarita, California, USA</a><br>
 
 </div>
 
 
-<br>
 <div class="region">
-  <h2 id="CUUS">Corrine, Utah, USA</h2><br>
+  <h2 id="SANF">Northern California, USA</h2>
+  <button4 onclick="tuneSDR('650')">KSTE Talk Radio 650</button4>
+  <button4 onclick="tuneSDR('680')">KNBR Sports Radio 680</button4>
+  <button4 onclick="tuneSDR('710')">KFIA The Word 710</button4>
+  <button4 onclick="tuneSDR('740')">KCBS All News 740</button4>
+  <button4 onclick="tuneSDR('810')">KGO The Spread 810</button4>
+  <button4 onclick="tuneSDR('830')">KNCO News Talk 830</button4>
+  <button4 onclick="tuneSDR('890')">KVMX La Ranchera 890</button4>
+  <button4 onclick="tuneSDR('990')">KATD KIQI Relay 990</button4>
+  <button4 onclick="tuneSDR('1050')">KTCT ESPN Sports 1050</button4>
+  <button4 onclick="tuneSDR('1100')">KFAX Christian Radio 1100</button4>
+  <button4 onclick="tuneSDR('1140')">KHTK Sactown Sports 1140</button4>
+  <button4 onclick="tuneSDR('1170')">KLOK Radio Mirchi 1170</button4>
+  <button4 onclick="tuneSDR('1310')">KMKY Radio Mirchi 1310</button4>
+  <button4 onclick="tuneSDR('1350')">KSRO News Talk 1350</button4>
+  <button4 onclick="tuneSDR('1360')">KFIV Power Talk 1360</button4>
+  <button4 onclick="tuneSDR('1530')">KFBK NewsRadio 1530</button4>
+  <button4 onclick="tuneSDR('1550')">KZDG Radio Zindagi 1550</button4>
+  <button4 onclick="tuneSDR('1640')">KDIA Christian Talk 1640</button4>
+  <br>
+  <br>
+  <a href="http://kphsdr.com:8073/?f=1000/-5000,5000samz10" target="_blank">KiwiSDR, Point Reyes, California, USA</a><br>
+  <a href="http://76.126.82.217:8073/?f=1000/-5000,5000samz10" target="_blank">KiwiSDR, San Jose, California, USA</a><br>
+  <a href="http://kr6la.proxy.kiwisdr.com:8073/?f=1000/-5000,5000samz10" target="_blank">KiwiSDR, Fort Collins, California, USA</a><br>
+
+</div>
+
+
+<div class="region">
+  <h2 id="CUUS">Corrine, Utah, USA</h2>
   <button4 onclick="tuneSDR('570')">KNRS Talk Radio 570</button4>
   <button4 onclick="tuneSDR('610')">KVNU News Talk 610</button4>
   <button4 onclick="tuneSDR('660')">KTNN Navaho Nation 660</button4>
@@ -415,14 +511,13 @@ How to use: 1) Click on a city or region. 2) Click the button for a station. 3) 
   <button4 onclick="tuneSDR('1640')">KBJA K-Talk Radio 1640</button4>
   <br>
   <br>
-  <a href="http://websdr1.sdrutah.org:8901/index1a.html?tune=1000am?zoom=4" target="_blank">WebSDR, Corrine, Utah, USA</a><br>
+  <a href="http://websdr1.sdrutah.org:8901/index1a.html?tune=1000am" target="_blank">WebSDR, Corrine, Utah, USA</a><br>
 
 </div>
 
 
-<br>
 <div class="region">
-  <h2 id="TXUS">Gatesville, Texas, USA</h2><br>
+  <h2 id="TXUS">Gatesville, Texas, USA</h2>
   <button4 onclick="tuneSDR('570')">KLIF News Radio 570</button4>
   <button4 onclick="tuneSDR('590')">KLBJ News Radio 590</button4>
   <button4 onclick="tuneSDR('620')">KTNO Radio Luz 620</button4>
@@ -440,7 +535,7 @@ How to use: 1) Click on a city or region. 2) Click the button for a station. 3) 
   <button4 onclick="tuneSDR('1600')">KOKE Puro Norteño 1600</button4>
   <br>
   <br>
-  <a href="http://143.55.35.146:8901/?tune=1000am?zoom=4" target="_blank">WebSDR, Gatesville, Texas, USA</a><br>
+  <a href="http://143.55.35.146:8901/?tune=1000am" target="_blank">WebSDR, Gatesville, Texas, USA</a><br>
 
 </div>
 
@@ -449,7 +544,6 @@ How to use: 1) Click on a city or region. 2) Click the button for a station. 3) 
 
 <!-- content for third tab -->
 <div id="Canada" class="tabcontent">
-
 <pre class="contents">
 <p style="font-family:monospace;font-size:18px;font-weight:700;text-align:center;">Receiver Locations (Click for Stations)</p>
 <a href="#HMNS">Halifax - Moncton Area</a>
@@ -463,9 +557,8 @@ How to use: 1) Click on a city or region. 2) Click the button for a station. 3) 
 <a href="#VABC">Vancouver</a>
 </pre>
 
-<br>
 <div class="region">
-  <h2 id="HMNS">Halifax - Moncton Area</h2><br>
+  <h2 id="HMNS">Halifax - Moncton Area</h2>
   <button4 onclick="tuneSDR('640')">CBN 640</button4>
   <button4 onclick="tuneSDR('930')">CFBC 930</button4>
   <button4 onclick="tuneSDR('990')">CBY 990</button4>
@@ -476,9 +569,8 @@ How to use: 1) Click on a city or region. 2) Click the button for a station. 3) 
 
 </div>
 
-<br>
 <div class="region">
-  <h2 id="MOQC">Montreal</h2><br>
+  <h2 id="MOQC">Montreal</h2>
   <button4 onclick="tuneSDR('690')">CKGM 690</button4>
   <button4 onclick="tuneSDR('730')">CKAC 730</button4>
   <button4 onclick="tuneSDR('800')">CJAD 800</button4>
@@ -492,9 +584,8 @@ How to use: 1) Click on a city or region. 2) Click the button for a station. 3) 
 
 </div>
 
-<br>
 <div class="region">
-  <h2 id="OTON">Ottawa</h2><br>
+  <h2 id="OTON">Ottawa</h2>
   <button4 onclick="tuneSDR('580')">CFRA 580</button4>
   <button4 onclick="tuneSDR('1200')">CFGO 1200</button4>
   <button4 onclick="tuneSDR('1310')">CIWW 1310</button4>
@@ -505,9 +596,8 @@ How to use: 1) Click on a city or region. 2) Click the button for a station. 3) 
 
 </div>
 
-<br>
 <div class="region">
-  <h2 id="TOON">Toronto</h2><br>
+  <h2 id="TOON">Toronto</h2>
   <button4 onclick="tuneSDR('530')">CHLO 530</button4>
   <button4 onclick="tuneSDR('740')">CFZM 740</button4>
   <button4 onclick="tuneSDR('800')">CJBQ 800</button4>
@@ -523,9 +613,8 @@ How to use: 1) Click on a city or region. 2) Click the button for a station. 3) 
 
 </div>
 
-<br>
 <div class="region">
-  <h2 id="WIMC">Winnipeg</h2><br>
+  <h2 id="WIMC">Winnipeg</h2>
   <button4 onclick="tuneSDR('680')">CJOB 680</button4>
   <button4 onclick="tuneSDR('920')">CFRY 920</button4>
   <button4 onclick="tuneSDR('990')">CBW 990</button4>
@@ -538,9 +627,8 @@ How to use: 1) Click on a city or region. 2) Click the button for a station. 3) 
 
 </div>
 
-<br>
 <div class="region">
-  <h2 id="RSSK">Regina and Saskatoon</h2><br>
+  <h2 id="RSSK">Regina and Saskatoon</h2>
   <button4 onclick="tuneSDR('540')">CBK 540</button4>
   <button4 onclick="tuneSDR('600')">CJWW 600</button4>
   <button4 onclick="tuneSDR('800')">CHAB 800</button4>
@@ -552,9 +640,8 @@ How to use: 1) Click on a city or region. 2) Click the button for a station. 3) 
 
 </div>
 
-<br>
 <div class="region">
-  <h2 id="EDAB">Edmonton</h2><br>
+  <h2 id="EDAB">Edmonton</h2>
   <button4 onclick="tuneSDR('580')">CKUA 580</button4>
   <button4 onclick="tuneSDR('630')">CHED 630</button4>
   <button4 onclick="tuneSDR('740')">CBX 740</button4>
@@ -570,9 +657,8 @@ How to use: 1) Click on a city or region. 2) Click the button for a station. 3) 
 
 </div>
 
-<br>
 <div class="region">
-  <h2 id="CAAB">Calgary</h2><br>
+  <h2 id="CAAB">Calgary</h2>
   <button4 onclick="tuneSDR('540')">CBK 540</button4>
   <button4 onclick="tuneSDR('660')">CFFR 660</button4>
   <button4 onclick="tuneSDR('1010')">CBR 1010</button4>
@@ -585,9 +671,8 @@ How to use: 1) Click on a city or region. 2) Click the button for a station. 3) 
 
 </div>
 
-<br>
 <div class="region">
-  <h2 id="VABC">Vancouver</h2><br>
+  <h2 id="VABC">Vancouver</h2>
   <button4 onclick="tuneSDR('690')">CBU 690</button4>
   <button4 onclick="tuneSDR('980')">CKNW 980</button4>
   <button4 onclick="tuneSDR('1040')">CKST 1040</button4>
@@ -607,7 +692,6 @@ How to use: 1) Click on a city or region. 2) Click the button for a station. 3) 
 
 <!-- content for fourth tab -->
 <div id="AusNz" class="tabcontent">
-
 <pre class="contents">
 <p style="font-family:monospace;font-size:18px;font-weight:700;text-align:center;">Receiver Locations (Click for Stations)</p>
 <a href="#ADLA">Adelaide, SA, AUS</a>
@@ -624,9 +708,8 @@ How to use: 1) Click on a city or region. 2) Click the button for a station. 3) 
 <a href="#WELL">Wellington, WGN, NZ</a>
 </pre>
 
-<br>
 <div class="region">
-  <h2 id="ADLA">Adelaide, SA, AUS</h2><br>
+  <h2 id="ADLA">Adelaide, SA, AUS</h2>
   <button4 onclick="tuneSDR('531')">5RTI 531</button4>
   <button4 onclick="tuneSDR('729')">5RN 729</button4>
   <button4 onclick="tuneSDR('891')">5AN 891</button4>
@@ -646,9 +729,8 @@ How to use: 1) Click on a city or region. 2) Click the button for a station. 3) 
 
 </div>
 
-<br>
 <div class="region">
-  <h2 id="BRIS">Brisbane, QLD, AUS</h2><br>
+  <h2 id="BRIS">Brisbane, QLD, AUS</h2>
   <button4 onclick="tuneSDR('612')">ABCRadio 612</button4>
   <button4 onclick="tuneSDR('693')">SENQ 693</button4>
   <button4 onclick="tuneSDR('793')">RadioNational 793</button4>
@@ -664,9 +746,8 @@ How to use: 1) Click on a city or region. 2) Click the button for a station. 3) 
 
 </div>
 
-<br>
 <div class="region">
-  <h2 id="CANB">Canberra, NSW, AUS</h2><br>
+  <h2 id="CANB">Canberra, NSW, AUS</h2>
   <button4 onclick="tuneSDR('666')">ABCRadio 666</button4>
   <button4 onclick="tuneSDR('846')">RadioNational 846</button4>
   <button4 onclick="tuneSDR('1008')">SkySports 1008</button4>
@@ -681,9 +762,8 @@ How to use: 1) Click on a city or region. 2) Click the button for a station. 3) 
 
 </div>
 
-<br>
 <div class="region">
-  <h2 id="DARW">Darwin, NT, AUS</h2><br>
+  <h2 id="DARW">Darwin, NT, AUS</h2>
   <button4 onclick="tuneSDR('657')">RadioNational 657</button4>
   <button4 onclick="tuneSDR('1242')">RadioTab 1242</button4>
   <button4 onclick="tuneSDR('1530')">YolnuRadio 1530</button4>
@@ -696,9 +776,8 @@ How to use: 1) Click on a city or region. 2) Click the button for a station. 3) 
 
 </div>
 
-<br>
 <div class="region">
-  <h2 id="MELB">Melbourne, VIC, AUS</h2><br>
+  <h2 id="MELB">Melbourne, VIC, AUS</h2>
   <button4 onclick="tuneSDR('594')">ABC-Wimmera 594</button4>
   <button4 onclick="tuneSDR('621')">RadioNational 621</button4>
   <button4 onclick="tuneSDR('693')">NewsTalk 693</button4>
@@ -717,9 +796,8 @@ How to use: 1) Click on a city or region. 2) Click the button for a station. 3) 
 
 </div>
 
-<br>
 <div class="region">
-  <h2 id="NEWC">Newcastle, NSW, AUS</h2><br>
+  <h2 id="NEWC">Newcastle, NSW, AUS</h2>
   <button4 onclick="tuneSDR('585')">2WEB-OutbackRadio 585</button4>
   <button4 onclick="tuneSDR('738')">ABC-NorthCoast 738</button4>
   <button4 onclick="tuneSDR('1143')">2HD 1143</button4>
@@ -738,9 +816,8 @@ How to use: 1) Click on a city or region. 2) Click the button for a station. 3) 
 
 </div>
 
-<br>
 <div class="region">
-  <h2 id="PERT">Perth, WA, AUS</h2><br>
+  <h2 id="PERT">Perth, WA, AUS</h2>
   <button4 onclick="tuneSDR('585')">NewsRadio 585</button4>
   <button4 onclick="tuneSDR('657')">SEN-Track 657</button4>
   <button4 onclick="tuneSDR('720')">ABC-Perth 720</button4>
@@ -754,9 +831,8 @@ How to use: 1) Click on a city or region. 2) Click the button for a station. 3) 
 
 </div>
 
-<br>
 <div class="region">
-  <h2 id="SYDN">Sydney, NSW</h2><br>
+  <h2 id="SYDN">Sydney, NSW</h2>
   <button4 onclick="tuneSDR('576')">RadioNational 576</button4>
   <button4 onclick="tuneSDR('630')">NewsRadio 630</button4>
   <button4 onclick="tuneSDR('702')">ABC-Sydney 702</button4>
@@ -780,9 +856,8 @@ How to use: 1) Click on a city or region. 2) Click the button for a station. 3) 
 
 </div>
 
-<br>
 <div class="region">
-  <h2 id="BURN">Burnie, TAS</h2><br>
+  <h2 id="BURN">Burnie, TAS</h2>
   <button4 onclick="tuneSDR('576')">RadioNational-SYD 576</button4>
   <button4 onclick="tuneSDR('621')">RadioNational-MLB 621</button4>
   <button4 onclick="tuneSDR('729')">RadioNational-ADL 729</button4>
@@ -801,9 +876,8 @@ How to use: 1) Click on a city or region. 2) Click the button for a station. 3) 
 
 </div>
 
-<br>
 <div class="region">
-  <h2 id="AUCK">Auckland, AUK, NZ</h2><br>
+  <h2 id="AUCK">Auckland, AUK, NZ</h2>
   <button4 onclick="tuneSDR('531')">531Pi 531</button4>
   <button4 onclick="tuneSDR('603')">Waatea 603</button4>
   <button4 onclick="tuneSDR('702')">Today 702</button4>
@@ -826,9 +900,8 @@ How to use: 1) Click on a city or region. 2) Click the button for a station. 3) 
 
 </div>
 
-<br>
 <div class="region">
-  <h2 id="CHRI">Christchurch, CAN, NZ</h2><br>
+  <h2 id="CHRI">Christchurch, CAN, NZ</h2>
   <button4 onclick="tuneSDR('540')">Rhema 540</button4>
   <button4 onclick="tuneSDR('612')">Star 612</button4>
   <button4 onclick="tuneSDR('675')">RadioNewZealand 675</button4>
@@ -845,9 +918,8 @@ How to use: 1) Click on a city or region. 2) Click the button for a station. 3) 
 
 </div>
 
-<br>
 <div class="region">
-  <h2 id="WELL">Wellington, WGN, NZ</h2><br>
+  <h2 id="WELL">Wellington, WGN, NZ</h2>
   <button4 onclick="tuneSDR('567')">RadioNewZealand 567</button4>
   <button4 onclick="tuneSDR('657')">Star 657</button4>
   <button4 onclick="tuneSDR('711')">SENZ-Sport 711</button4>
@@ -871,7 +943,6 @@ How to use: 1) Click on a city or region. 2) Click the button for a station. 3) 
 
 <!-- content for fifth tab -->
 <div id="India" class="tabcontent">
-
 <pre class="contents">
 <p style="font-family:monospace;font-size:18px;font-weight:700;text-align:center;">Receiver Locations (Click for Stations)</p>
 <a href="#MUMB">Mumbai, MH, IN</a>
@@ -883,9 +954,8 @@ How to use: 1) Click on a city or region. 2) Click the button for a station. 3) 
 <a href="#DIMA">Dimapur, NL, IN</a>
 </pre>
 
-<br>
 <div class="region">
-  <h2 id="MUMB">Mumbai, MH, IN</h2><br>
+  <h2 id="MUMB">Mumbai, MH, IN</h2>
   <button4 onclick="tuneSDR('558')">AIR Mumbai 558</button4>
   <button4 onclick="tuneSDR('792')">AIR Pune 792</button4>
   <button4 onclick="tuneSDR('1287')">AIR Panaji 1287</button4>
@@ -895,22 +965,19 @@ How to use: 1) Click on a city or region. 2) Click the button for a station. 3) 
 
 </div>
 
-<br>
 <div class="region">
-  <h2 id="NEWD">New Delhi, NCT, IN</h2><br>
+  <h2 id="NEWD">New Delhi, NCT, IN</h2>
   <button4 onclick="tuneSDR('819')">AIR Indraprastha 819</button4>
-  <button4 onclick="tuneSDR('1143')">Ratnagiri 1143</button4>
-  <button4 onclick="tuneSDR('1421')">Unknown 1421</button4>
-  <button4 onclick="tuneSDR('1638')">Unknown 1638</button4>
+  <button4 onclick="tuneSDR('1143')">AIR Ratnagiri 1143</button4>
+  <button4 onclick="tuneSDR('1638')">AIR New Delhi 1638</button4>
   <br>
   <br>
   <a href="http://del.twrmon.net:8073/?f=1000/-5000,5000samz10" target="_blank">KiwiSDR, New Delhi, India</a></br>
 
 </div>
 
-<br>
 <div class="region">
-  <h2 id="AHME">Ahmedabad, GJ, IN</h2><br>
+  <h2 id="AHME">Ahmedabad, GJ, IN</h2>
   <button4 onclick="tuneSDR('846')">AIR Ahmedabad 846</button4>
   <br>
   <br>
@@ -918,9 +985,8 @@ How to use: 1) Click on a city or region. 2) Click the button for a station. 3) 
 
 </div>
 
-<br>
 <div class="region">
-  <h2 id="BENG">Bengaluru, KA, IN</h2><br>
+  <h2 id="BENG">Bengaluru, KA, IN</h2>
   <button4 onclick="tuneSDR('612')">AIR Bengaluru 612</button4>
   <button4 onclick="tuneSDR('720')">AIR Chennai 720</button4>
   <button4 onclick="tuneSDR('765')">AIR Dharwad 765</button4>
@@ -934,9 +1000,8 @@ How to use: 1) Click on a city or region. 2) Click the button for a station. 3) 
 
 </div>
 
-<br>
 <div class="region">
-  <h2 id="COIM">Coimbatore, TN, IN</h2><br>
+  <h2 id="COIM">Coimbatore, TN, IN</h2>
   <button4 onclick="tuneSDR('612')">AIR Bengaluru 612</button4>
   <button4 onclick="tuneSDR('648')">AIR Indore 648</button4>
   <button4 onclick="tuneSDR('792')">AIR Pune 792</button4>
@@ -947,9 +1012,8 @@ How to use: 1) Click on a city or region. 2) Click the button for a station. 3) 
 
 </div>
 
-<br>
 <div class="region">
-  <h2 id="SILI">Siliguri, WB, IN</h2><br>
+  <h2 id="SILI">Siliguri, WB, IN</h2>
   <button4 onclick="tuneSDR('585')">AIR Nagpur 585</button4>
   <button4 onclick="tuneSDR('657')">AIR Kolkata 657</button4>
   <button4 onclick="tuneSDR('711')">AIR Siliguri 711</button4>
@@ -960,14 +1024,16 @@ How to use: 1) Click on a city or region. 2) Click the button for a station. 3) 
 
 </div>
 
-<br>
 <div class="region">
-  <h2 id="DIMA">Dimapur, NL, IN</h2><br>
+  <h2 id="DIMA">Dimapur, NL, IN</h2>
+  <button4 onclick="tuneSDR('567')">AIR Dibrugarh 567</button4>
   <button4 onclick="tuneSDR('594')">AIR Chinsurah 594</button4>
   <button4 onclick="tuneSDR('621')">AIR Patna 621</button4>
   <button4 onclick="tuneSDR('657')">AIR Kolkata 657</button4>
+  <button4 onclick="tuneSDR('675')">AIR Itanagar 675</button4>
   <button4 onclick="tuneSDR('747')">AIR Lucknow 747</button4>
   <button4 onclick="tuneSDR('819')">AIR New Delhi 819</button4>
+  <button4 onclick="tuneSDR('882')">AIR Imphal 882</button4>
   <button4 onclick="tuneSDR('1134')">AIR Chinsurah 1134</button4>
   <button4 onclick="tuneSDR('1008')">AIR Kolkata 1008</button4>
   <br>
@@ -979,22 +1045,65 @@ How to use: 1) Click on a city or region. 2) Click the button for a station. 3) 
 </div>
 <!-- fifth tab complete -->
 
-<p>Reception range is limited during local daylight hous due to ionospheric
+<!-- content for sixth tab -->
+<div id="About" class="tabcontent">
+<div style="text-align:left;">
+<p>
+Use this list to quickly open a browser tab, streaming your favorite station
+from an internet connected software defined radio receiver (SDR). If signals are
+weak or noisy, try another station or switch to a different receiver location. You
+can tune around and find more stations on any of the SDRs. They not only receive AM /
+mediumwave, but also work fabulously on shortwave.
+</p>
+
+<p><strong>No direct studio streams; no geoblocking by the broadcasters!</strong>
+</p>
+
+How to use:<br>
+<ol>
+    <li>Click on a city or region.</li>
+    <li>Click the button for a station.</li>
+    <li>Click on a receiver location to listen.</li>
+    <li>If necessary, click to start the audio.</li>
+</ol>
+
+<p>Night is best for mediumwave, and it is always night time <i>somewhere</i>.
+If you are not sure if it is day or night in the place you want to listen from,
+have a look at a <a href="https://www.timeanddate.com/worldclock/sunearth.html"
+target="_blank">day and night map</a> to see where the light and dark areas are.
+</p>
+
+<p>Reception range is limited during local daylight hours due to ionospheric
 absorbtion; night time range is very long - at least hundreds and sometimes
 a thousand kilometers or more. WebSDRs can accommodate plenty of users and
-site operators typically do not limit your time on the server. Have fun and
-enjoy the ease of AM / mediumwave listening by WebSDR!
+site operators typically do not limit your time on the server. KiwiSDRs have
+excellent features, such as AM stereo modes and synchronous demodulation. Have
+fun and enjoy the ease of AM / mediumwave listening on internet SDRs!
 </p>
 
 <p>
-<font style="color:yellow;">Please be a fair listener on the KiwiSDR radio servers.
-They are better radios but can only accommodate a few listeners at once. Avoid excessive
-time or opening multiple tabs from the same site at once, as site operators detect
-and block <b>users</b> or <b>frequencies</b> drawing excessive bandwidth.</font>
+Please be a fair listener on the KiwiSDR radio servers. They are better radios but
+can only accommodate a few listeners at once. Avoid excessive time or opening multiple
+tabs from the same site at once, as site operators detect and block <b>users</b> or
+<b>frequencies</b> drawing too much bandwidth.
 </p>
 
+<p>SDR sites are operated by volunteer radio enthusiasts. Some of them will accept
+donations from listeners, so consider helping to support the sites if you find them
+to be useful.
+</p>
+
+<p>As new radios go online and others drop off, this application will be updated
+periodically. Check for updates!
+</p>
+
+</div>
+</div>
+<!-- fifth tab complete -->
+
+<!-- page footer -->
 <hr />
-<p style="text-align:center;">SDR-Select version 1.3 &copy; 2023 Philip Collier. All rights reserved.</p>
+<p style="text-align:center;">SDR-Selector version 1.3 &copy; 2023 Philip Collier. All rights reserved.</p>
 
 <!-- javascript for tab handling -->
 <script type="text/javascript">
@@ -1022,12 +1131,19 @@ function openRegion(evt, regionName) {
   evt.currentTarget.className += " active";
 }
 
-var currentfreq = '1000';
+var webMode = 'am';
+var kiwiMode = 'sam';
+var currentFreq = '1000';
+var bandpass = '/-5000,5000';
+var kiwiZoom = 'z10';
+var webZoom = '?zoom=4';
+
+window.onload = tuneSDR(currentFreq);
+
 function tuneSDR(varval) {
-  currentfreq = varval;
-console.log(currentfreq)
-document.body.innerHTML = document.body.innerHTML.replaceAll(/tune=.*am/g, "tune=" + currentfreq + "am");
-document.body.innerHTML = document.body.innerHTML.replaceAll(/\?f=.*\/-5000/g, "?f=" + currentfreq + "/-5000");
+  currentFreq = varval;
+  document.body.innerHTML = document.body.innerHTML.replaceAll(/\?f=.*" /g, "?f=" + currentFreq + bandpass + kiwiMode + kiwiZoom + '" ');
+  document.body.innerHTML = document.body.innerHTML.replaceAll(/tune=.*" /g, "tune=" + currentFreq + webMode + '" ');
 }
 </script>
 </body>
